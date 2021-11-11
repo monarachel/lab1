@@ -1,5 +1,5 @@
  ---
-        - hosts: localhost  g
+        - hosts: localhost  
         gather_facts: true  
         become: true  
         roles:  
