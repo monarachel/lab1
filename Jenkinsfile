@@ -29,6 +29,15 @@ pipeline {
                  }
                  }
                  }
+                 
+                   stage ('Docker') {
+               steps{
+                 script{
+                    sh "ansible-playbook Ansible/docker.yml -i Ansible/inventory/host.yml -u root --private-key=/var/lib/jenkins/.ssh/id_rsa"
+                 }
+               }
+
+        }
        
     }
    
