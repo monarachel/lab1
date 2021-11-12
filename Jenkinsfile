@@ -24,7 +24,7 @@ pipeline {
                  steps {
                  		
                  	script{
-                 	sh "ansible-playbook Ansible/build.yml -i ansible/inventory/host.yml "
+                 	sh "ansible-playbook Ansible/build.yml -i Ansible/inventory/host.yml --private-key=/var/lib/jenkins/.ssh/id_rsa"
                  	
                  }
                  }
