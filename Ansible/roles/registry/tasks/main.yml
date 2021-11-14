@@ -1,0 +1,15 @@
+---
+# tasks file for registry
+# tasks file for docker-registry
+- name: Log into DockerHub
+  docker_login:
+    username: monarctic
+    password: ce1fc3a7-b1d1-44ce-a9fd-56733f87114d
+              
+- name: Tag and push to docker hub
+  docker_image:
+    source: local
+    name: devops:latest
+    repository: monarctic/devops
+    tag: end
+    push: yes

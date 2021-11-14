@@ -39,6 +39,14 @@ pipeline {
 
         }
        
+       stage('dockerHub') {
+             steps{
+                script{
+                    sh "ansible-playbook Ansible/registry.yml -i Ansible/inventory/host.yml --private-key=/var/lib/jenkins/.ssh/id_rsa -u root"
+                }
+            }
+        }
+       
     }
    
   
