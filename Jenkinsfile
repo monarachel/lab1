@@ -14,8 +14,7 @@ pipeline {
             }
         }
 
-       }
-        
+               
        
       }  
       
@@ -32,7 +31,7 @@ pipeline {
                  
                   
       
-   
+    }
   post {
         always {
             cleanWs()
