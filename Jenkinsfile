@@ -30,24 +30,8 @@ pipeline {
                  }
                  }
                  
-                   stage ('Docker') {
-               steps{
-                 script{
-                    sh "ansible-playbook Ansible/docker.yml -i Ansible/inventory/host.yml -u root --private-key=/var/lib/jenkins/.ssh/id_rsa"
-                 }
-               }
-
-        }
-       
-       stage('dockerHub') {
-             steps{
-                script{
-                    sh "ansible-playbook Ansible/docker-registry.yml -i Ansible/inventory/host.yml --private-key=/var/lib/jenkins/.ssh/id_rsa -u root"
-                }
-            }
-        }
-       
-    }
+                  
+      
    
   post {
         always {
